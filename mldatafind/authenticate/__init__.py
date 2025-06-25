@@ -13,7 +13,7 @@ def authenticate():
     # then create scitokens
     try:
         x509_auth()
-    except ValueError as e:
+    except Exception as e:
         logging.warning(f"Failed to authenticate to x509: {e}")
 
     # if running locally, can try to gen scitoken
